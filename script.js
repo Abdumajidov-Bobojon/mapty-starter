@@ -13,7 +13,11 @@ let activties = JSON.parse(localStorage.getItem("activities")) || []
 let map;
 let mapEvent;
 
-if (navigator.geolocation) {
+// if (navigator.geolocation) {
+   
+// }
+
+function myGeolcation() {
     navigator.geolocation.getCurrentPosition(function (position) {
         const { latitude, longitude } = position.coords
 
@@ -145,3 +149,4 @@ function renderActivities() {
         containerWorkouts.insertAdjacentHTML("beforeend", html);
     }
 }
+myGeolcation()
